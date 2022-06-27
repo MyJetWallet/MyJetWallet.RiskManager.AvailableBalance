@@ -1,0 +1,39 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A9BF0F63-0AC7-40BB-AC7B-14179C3295DD}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		.github\workflows\release-api-client.yml = .github\workflows\release-api-client.yml
+		.github\workflows\ci-test.yml = .github\workflows\ci-test.yml
+		.github\workflows\update_nuget.yaml = .github\workflows\update_nuget.yaml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyJetWallet.RiskManager.AvailableBalance", "src\MyJetWallet.RiskManager.AvailableBalance\MyJetWallet.RiskManager.AvailableBalance.csproj", "{8F0B8E3E-7568-4F3D-996F-5AC8F7668746}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyJetWallet.RiskManager.AvailableBalanceTests", "src\MyJetWallet.RiskManager.AvailableBalance.Tests\MyJetWallet.RiskManager.AvailableBalance.Tests.csproj", "{55530EAF-0A73-4FEF-A5A7-622738E0720B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F0B8E3E-7568-4F3D-996F-5AC8F7668746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F0B8E3E-7568-4F3D-996F-5AC8F7668746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F0B8E3E-7568-4F3D-996F-5AC8F7668746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F0B8E3E-7568-4F3D-996F-5AC8F7668746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55530EAF-0A73-4FEF-A5A7-622738E0720B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55530EAF-0A73-4FEF-A5A7-622738E0720B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55530EAF-0A73-4FEF-A5A7-622738E0720B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55530EAF-0A73-4FEF-A5A7-622738E0720B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2FAC3710-7C8F-4815-A4AF-FC6EC85C44BD}
+	EndGlobalSection
+EndGlobal

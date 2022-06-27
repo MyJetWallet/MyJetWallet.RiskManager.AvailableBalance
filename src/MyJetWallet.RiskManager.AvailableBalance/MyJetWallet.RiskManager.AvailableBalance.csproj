@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <PackageProjectUrl>https://github.com/MyJetWallet/MyJetWallet.Sdk.WalletApi</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MyJetWallet/MyJetWallet.RiskManager.AvailableBalance</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MyJetWallet.Service.AssetsDictionary.Client" Version="2.10.3" />
+    <PackageReference Include="MyJetWallet.Service.Balances.Client" Version="2.2.4" />
+    <PackageReference Include="MyJetWallet.Service.ClientRiskManager.Client" Version="1.1.0" />
+    <PackageReference Include="MyJetWallet.Service.ClientWallets.Client" Version="1.4.2" />
+    <PackageReference Include="MyJetWallet.Service.HighYieldEngine.Client" Version="1.0.97" />
+    <PackageReference Include="MyJetWallet.Service.IndexPrices.Client" Version="1.7.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties" />
+  </ItemGroup>
+
+</Project>
