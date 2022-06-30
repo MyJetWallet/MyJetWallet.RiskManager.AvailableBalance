@@ -116,7 +116,7 @@ namespace MyJetWallet.RiskManager.AvailableBalance.AvailableBalance
                 {
                     ClientId = clientId,
                     BaseAsset = baseAsset,
-                    Lang = language, //"En",
+                    Lang = language, //"en",
                     Brand = brandId,
                     BrokerId = brokerId
                 });
@@ -147,7 +147,9 @@ namespace MyJetWallet.RiskManager.AvailableBalance.AvailableBalance
                 
                 var usdReserved = clientLimitsSummary.DepositLast14DaysInUsd; //todo sub aveilable reserve to withdrawal
 
-                var availableAmountUsd = usdAccountEquity - usdReserved;
+                var availableAmountUsd = (usdAccountEquity > usdReserved)
+                    ? (usdAccountEquity - usdReserved) 
+                    : 0m;
                 
                 foreach (var balance in balances)
                 {
