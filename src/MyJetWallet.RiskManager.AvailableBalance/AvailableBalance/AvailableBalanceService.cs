@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using MyJetWallet.Domain.Assets;
+using MyJetWallet.RiskManager.AvailableBalance.Models;
 using Service.AssetsDictionary.Client;
 using Service.Balances.Domain.Models;
 using Service.Balances.Grpc;
@@ -50,6 +51,29 @@ namespace MyJetWallet.RiskManager.AvailableBalance.AvailableBalance
 
             await CalculateCardReserveForWalletBalances(
                 walletId, clientId, brokerId, brandId, baseAsset, language, balances);
+
+            return balances;
+        }
+        
+        public async ValueTask<List<Models.AvailableBalance>> GetAndCalculateAvailableWalletBalances(
+            GetAvailableWalletBalanceRequest request, List<string> assetShowOnlyWithBalance)
+        {
+            var balances = await CalculateBalancesForWalletBalances(
+                request.WalletId, request.ClientId, request.BrokerId, assetShowOnlyWithBalance);
+
+            await CalculateCardReserveForWalletBalances(
+                request.WalletId, request.ClientId, request.BrokerId, request.BrandId, request.BaseAsset, 
+                request.Language, balances);
+
+            return balances;
+        }
+        
+        public async ValueTask<List<Models.AvailableBalance>> CalculateAvailableWalletBalances(
+            GetAvailableWalletBalanceRequest request, List<Models.AvailableBalance> balances)
+        {
+            await CalculateCardReserveForWalletBalances(
+                request.WalletId, request.ClientId, request.BrokerId, request.BrandId, request.BaseAsset, 
+                request.Language, balances);
 
             return balances;
         }
